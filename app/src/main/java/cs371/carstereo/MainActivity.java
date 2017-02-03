@@ -115,18 +115,39 @@ public class MainActivity extends AppCompatActivity {
             }
             if(buttonChoice == R.id.preset4)
             {
-
+                if(freqency == true)
+                {
+                    amPresets[3] = AMstation;
+                }
+                else
+                {
+                    fmPresets[3] = FMstation;
+                }
             }
             if(buttonChoice == R.id.preset5)
             {
-
+                if(freqency == true)
+                {
+                    amPresets[4] = AMstation;
+                }
+                else
+                {
+                    fmPresets[4] = FMstation;
+                }
             }
             if(buttonChoice == R.id.preset6)
             {
-
+                if(freqency == true)
+                {
+                    amPresets[5] = AMstation;
+                }
+                else
+                {
+                    fmPresets[5] = FMstation;
+                }
             }
 
-
+            return true;
         }
     }
 
@@ -158,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    FMstation = fmPresets[1]
+                    FMstation = fmPresets[1];
                     songName.setText(FMstation + " MHz FM");
                 }
             }
