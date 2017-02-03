@@ -27,10 +27,13 @@ public class MainActivity extends AppCompatActivity {
     private Button set5;
     private Button set6;
 
+
     public boolean isOff = false;
     public boolean freqency = false;
     public int AMstation = 530;
     public double FMstation = 88.1;
+    public int[] amPresets = {550, 600, 650, 700, 750, 800};
+    public double[] fmPresets = {90.9, 92.9, 94.9, 96.9, 98.9, 100.9};
 
 
     @Override
@@ -77,21 +80,51 @@ public class MainActivity extends AppCompatActivity {
         public boolean onLongClick(View v)
         {
             int buttonChoice = v.getId();
+            if(buttonChoice == R.id.preset1)
+            {
+                if(freqency == true)
+                {
+                    amPresets[0] = AMstation;
+                }
+                else
+                {
+                    fmPresets[0] = FMstation;
+                }
+            }
+            if(buttonChoice == R.id.preset2)
+            {
+                if(freqency == true)
+                {
+                    amPresets[1] = AMstation;
+                }
+                else
+                {
+                    fmPresets[1] = FMstation;
+                }
+            }
+            if(buttonChoice == R.id.preset3)
+            {
+                if(freqency == true)
+                {
+                    amPresets[2] = AMstation;
+                }
+                else
+                {
+                    fmPresets[2] = FMstation;
+                }
+            }
+            if(buttonChoice == R.id.preset4)
+            {
 
+            }
+            if(buttonChoice == R.id.preset5)
+            {
 
+            }
+            if(buttonChoice == R.id.preset6)
+            {
 
-
-
-
-
-
-
-
-
-
-
-
-
+            }
 
 
         }
@@ -107,12 +140,12 @@ public class MainActivity extends AppCompatActivity {
             {
                 if(freqency == true)
                 {
-                    AMstation = 550;
+                    AMstation = amPresets[0];
                     songName.setText(AMstation + " kHz AM");
                 }
                 else
                 {
-                    FMstation = 90.9;
+                    FMstation = fmPresets[0];
                     songName.setText(FMstation + " MHz FM");
                 }
             }
@@ -120,12 +153,12 @@ public class MainActivity extends AppCompatActivity {
             {
                 if(freqency == true)
                 {
-                    AMstation = 600;
+                    AMstation = amPresets[1];
                     songName.setText(AMstation + " kHz AM");
                 }
                 else
                 {
-                    FMstation = 92.9;
+                    FMstation = fmPresets[1]
                     songName.setText(FMstation + " MHz FM");
                 }
             }
@@ -133,12 +166,12 @@ public class MainActivity extends AppCompatActivity {
             {
                 if(freqency == true)
                 {
-                    AMstation = 650;
+                    AMstation = amPresets[2];
                     songName.setText(AMstation + " kHz AM");
                 }
                 else
                 {
-                    FMstation = 94.9;
+                    FMstation = fmPresets[2];
                     songName.setText(FMstation + " MHz FM");
                 }
             }
@@ -146,12 +179,12 @@ public class MainActivity extends AppCompatActivity {
             {
                 if(freqency == true)
                 {
-                    AMstation = 700;
+                    AMstation = amPresets[3];
                     songName.setText(AMstation + " kHz AM");
                 }
                 else
                 {
-                    FMstation = 96.9;
+                    FMstation = fmPresets[3];
                     songName.setText(FMstation + " MHz FM");
                 }
             }
@@ -159,12 +192,12 @@ public class MainActivity extends AppCompatActivity {
             {
                 if(freqency == true)
                 {
-                    AMstation = 750;
+                    AMstation = amPresets[4];
                     songName.setText(AMstation + " kHz AM");
                 }
                 else
                 {
-                    FMstation = 98.9;
+                    FMstation = fmPresets[4];
                     songName.setText(FMstation + " MHz FM");
                 }
             }
@@ -172,12 +205,12 @@ public class MainActivity extends AppCompatActivity {
             {
                 if(freqency == true)
                 {
-                    AMstation = 800;
+                    AMstation = amPresets[5];
                     songName.setText(AMstation + " kHz AM");
                 }
                 else
                 {
-                    FMstation = 100.9;
+                    FMstation = fmPresets[5];
                     songName.setText(FMstation + " MHz FM");
                 }
             }
